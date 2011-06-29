@@ -8,40 +8,29 @@
   <?php
   }
 
+  function regular_stat($val, $name, $jsName){
+    $result = array( "val" => $val, "min_val" => 1, "max_val" => 5,
+                    "name" => $name, "show_dots" => 5, "full_dot" => "*",
+                    "empty_dot" => "-", "js-name" => $jsName);
+    return($result);
+  }
+
   $physical_attributes = array(
-    "Siła" => array( "val" => 1, "min_val" => 1, "max_val" => 5,
-                      "name" => "strength-input-wrapper", "show_dots" => 5, "full_dot" => "*",
-                      "empty_dot" => "-", "js-name" => "strInput"),
-    "Zręczność" => array( "val" => 1, "min_val" => 1, "max_val" => 5,
-                      "name" => "dextrity-input-wrapper", "show_dots" => 5, "full_dot" => "*",
-                      "empty_dot" => "-", "js-name" => "dexInput"),
-    "Wytrzymałość" => array( "val" => 1, "min_val" => 1, "max_val" => 5,
-                      "name" => "stamina-input-wrapper", "show_dots" => 5, "full_dot" => "*",
-                      "empty_dot" => "-", "js-name" => "staInput")
+    "Siła" => regular_stat(1, "strength-input-wrapper", "strInput"),
+    "Zręczność" => regular_stat(1, "dextrity-input-wrapper", "dexInput"),
+    "Wytrzymałość" => regular_stat(1, "stamina-input-wrapper", "staInput")
   );
 
   $social_attributes = array(
-    "Charyzma" => array( "val" => 1, "min_val" => 1, "max_val" => 5,
-                      "name" => "charisma-input-wrapper", "show_dots" => 5, "full_dot" => "*",
-                      "empty_dot" => "-", "js-name" => "chaInput"),
-    "Oddziaływanie" => array( "val" => 1, "min_val" => 1, "max_val" => 5,
-                      "name" => "manipulation-input-wrapper", "show_dots" => 5, "full_dot" => "*",
-                      "empty_dot" => "-", "js-name" => "manInput"),
-    "Wygląd" => array( "val" => 1, "min_val" => 1, "max_val" => 5,
-                      "name" => "apperance-input-wrapper", "show_dots" => 5, "full_dot" => "*",
-                      "empty_dot" => "-", "js-name" => "appInput")
+    "Charyzma" => regular_stat(1, "charisma-input-wrapper", "chaInput"),
+    "Oddziaływanie" => regular_stat(1, "manipulation-input-wrapper", "manInput"),
+    "Wygląd" => regular_stat(1, "apperance-input-wrapper", "appInput")
   );
 
   $mental_attributes = array(
-    "Percepcja" => array( "val" => 1, "min_val" => 1, "max_val" => 5,
-                      "name" => "perception-input-wrapper", "show_dots" => 5, "full_dot" => "*",
-                      "empty_dot" => "-", "js-name" => "perInput"),
-    "Inteligencja" => array( "val" => 1, "min_val" => 1, "max_val" => 5,
-                      "name" => "inteligence-input-wrapper", "show_dots" => 5, "full_dot" => "*",
-                      "empty_dot" => "-", "js-name" => "intInput"),
-    "Spryt" => array( "val" => 1, "min_val" => 1, "max_val" => 5,
-                      "name" => "wits-input-wrapper", "show_dots" => 5, "full_dot" => "*",
-                      "empty_dot" => "-", "js-name" => "witInput"),
+    "Percepcja" => regular_stat(1, "perception-input-wrapper", "perInput"),
+    "Inteligencja" => regular_stat(1, "inteligence-input-wrapper", "intInput"),
+    "Spryt" => regular_stat(1, "wits-input-wrapper", "witInput")
   );
 
   function dot_inputs($fields){
