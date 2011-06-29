@@ -1,0 +1,58 @@
+.frame{
+  border-width: 2pt;
+  border-style: dotted;
+  border-color: grey;
+  background-color: white;
+}
+
+.button{
+  border-width: 1pt;
+  border-style: solid;
+  border-color: black;
+  background-color: grey;
+  padding: 2pt;
+  margin: 2pt;
+}
+
+.dot-display{
+  font-family: monospace;
+}
+
+.left-column{
+  float: left;
+  clear: left;
+}
+
+.central-column{
+  float: left;
+  clear: none;
+}
+
+.right-column{
+  float: left;
+  clear: right;
+}
+
+.input-wrapper{
+  padding: 5pt;
+  margin: 5pt;
+  width: 100%;
+}
+
+div{
+  float: left;
+  clear:both;
+}
+
+.left-aligned{
+  text-align: left;
+}
+
+.right-aligned{
+  text-align: right;
+}
+
+.stat-name{
+  width: 150px;
+  display: inline-block;
+}
